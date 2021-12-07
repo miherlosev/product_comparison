@@ -9,7 +9,7 @@
         var btn = document.createElement('button');
 
         btn.textContent = 'Element / assertion retry!';
-        btn.onclick     = "window.setTimeout(() => this.innerText = 'Loading...', 1000)";
+        btn.onclick     = "window.setTimeout(() => this.textContent = 'Loading...', 1000)";
 
         document.body.appendChild(btn);
     </script>
