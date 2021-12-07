@@ -1,0 +1,17 @@
+<html>
+	<body>
+		<button id="testButton">Button</button>
+		<div>
+			Event is trusted: <span is="isTrustedEventResult"></span>
+		</div>
+		<script>
+		    var btn = document.getElementById('testButton');
+
+			btn.addEventListener('click', function (e) {
+				var isTrustedEventResultElement = document.getElementById('isTrustedEventResult');
+
+				isTrustedEventResultElement.textContent = e.isTrusted.toString();
+			});
+		</script>
+	</body>
+</html>

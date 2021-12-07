@@ -1,0 +1,31 @@
+<html>
+  <body>
+		<div>
+		  <script>
+		      window.addEventListener('DOMContentLoaded', () => {
+			      var elements = document.querySelectorAll('button');
+
+				  for(let i = 0; i < elements.length; i++) {
+				     const element = elements[i];
+
+				     element.addEventListener('click', () => {
+					    console.log(element.id, ' is clicked.');
+					 });
+				  }
+			  });
+		  </script>
+		   <div style="position:relative; height: 100px">
+				<button id="overlappedButton" style="position:absolute; top:0; left:0;">Overlapped button</button>
+				<button id="outOfView" style="position:absolute; top:20px; left:-1000px;">Out of view</button>
+				<div style="position:absolute;top:0;left:0;width: 200px;height: 50px;border: 1px solid black; top:0; left:0;" id="buttonOverlay"></div>
+		   </div>
+		   <div>
+		     <button id="disabledButton" disabled>Disable button</button>
+		     <button id="noSizeButton" style="width:0;height:0;margin:0;padding:0;border:0"></button>
+			 <button id="nonDisplay" style="visibility: hidden;"></button>
+			 <button id="regularButton">Regular button</button>
+		   </div>
+
+		</div>
+  </body>
+</html>
