@@ -1,4 +1,16 @@
 <html>
+	<head>
+		<style>
+			#animatedButton {
+				transition-property: left;
+				transition-duration: 3s;
+				transition-timing-function: linear;
+				position: absolute;
+				top:0;
+				left: 0;
+			}
+		</style>
+	</head>
   <body>
 		<div>
 		  <script>
@@ -12,6 +24,12 @@
 					    console.log(element.id, ' is clicked.');
 					 });
 				  }
+
+				  var animatedButton = document.getElementById('animatedButton');
+
+				  animatedButton.addEventListener('click', function () {
+					  animatedButton.style.left = '100px';
+				  });
 			  });
 		  </script>
 		   <div style="position:relative; height: 100px">
@@ -24,6 +42,9 @@
 		     <button id="noSizeButton" style="width:0;height:0;margin:0;padding:0;border:0"></button>
 			 <button id="nonDisplay" style="visibility: hidden;"></button>
 			 <button id="regularButton">Regular button</button>
+			   <div style="position: relative; height: 100px;">
+				   <button id="animatedButton">Animated button</button>
+			   </div>
 		   </div>
 
 		</div>
