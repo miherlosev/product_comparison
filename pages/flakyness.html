@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var btn = document.createElement('button');
+
+        btn.textContent = 'Click me!';
+        btn.onclick     = "window.setTimeout(() => this.innerText = 'Loading...', 1000)";
+
+        document.body.appendChild(btn);
+    </script>
+</body>
+</html>
